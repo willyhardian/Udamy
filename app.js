@@ -6,8 +6,16 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
+app.get("/products/add", (req, res) => {
+    res.send("add products");
+});
+
 app.get("/products", (req, res) => {
     res.send("products");
+});
+
+app.post("/products/add", (req, res) => {
+    res.send("store products");
 });
 
 app.listen(port, () => {
