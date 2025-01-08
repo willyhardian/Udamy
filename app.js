@@ -7,7 +7,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/products", (req, res) => {
-    res.send("products");
+    const products = [
+        {
+            id: 1,
+            name: "Product 1",
+        },
+    ];
+    // response products
+    res.send(products);
+    // show products in json format
 });
 
 app.listen(port, () => {
