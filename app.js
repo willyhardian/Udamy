@@ -6,6 +6,10 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
+app.get("/products/add", (req, res) => {
+    res.send("add products");
+});
+
 app.get("/products", (req, res) => {
     const products = [
         {
@@ -16,6 +20,10 @@ app.get("/products", (req, res) => {
     // response products
     res.send(products);
     // show products in json format
+});
+
+app.post("/products/add", (req, res) => {
+    res.send("store products");
 });
 
 app.listen(port, () => {
